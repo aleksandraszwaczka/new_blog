@@ -5,6 +5,10 @@
 </p>
 
 <p>
+  <%= link_to "Edit", edit_post_path(@post) %>
+</p>
+
+<p>
   <%= link_to "Share", "https://www.facebook.com/sharer/sharer.php?" +
   {
     u: post_url(@post),
