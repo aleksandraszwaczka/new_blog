@@ -16,4 +16,13 @@ class PostsController < ApplicationController
 
     redirect_to action: "index"
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    #wyszukujemy posta
+    @post.destroy!
+    #usówamy posta
+    redirect_to action: "index"
+    #wracamy do indexu, żeby nie tworzyć nowego widoku dla destroy po usunięciu posta
+  end
 end
